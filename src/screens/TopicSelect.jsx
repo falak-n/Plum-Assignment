@@ -46,11 +46,16 @@ export default function TopicSelect(props) {
   return (
     <div className="card">
       {/* main title */}
-      <div className="title">Choose a topic</div>
-      <p className="subtitle">AI will generate 5 MCQs for your practice.</p>
+      {/* <div className="title">Choose a topic</div>
+      <p className="subtitle">AI will generate 5 MCQs for your practice.</p> */}
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div className="title">Choose a topic</div>
+        <p className="subtitle">AI will generate 5 MCQs for your practice.</p>
+      </div>
+
 
       {/* list of topic buttons */}
-      <div className="row">
+      <div className="row"style={{ justifyContent: 'center' }}>
         {topics.map(t => (
           <button
             key={t}
@@ -60,14 +65,23 @@ export default function TopicSelect(props) {
             {t}
           </button>
         ))}
+            
+
       </div>
 
       {/* start quiz button */}
-      <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
+      {/* <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
         <button className="btn" onClick={handleGenerate} disabled={loading}>
           {loading ? 'Generating…' : 'Start Quiz'}
         </button>
-      </div>
+      </div> */}
+       {/* start quiz button */}
+        <div style={{ marginTop: 16, display: 'flex', justifyContent: 'center' }}>
+          <button className="btn" onClick={handleGenerate} disabled={loading}>
+            {loading ? 'Generating…' : 'Start Quiz'}
+          </button>
+        </div>
+
 
       {/* show retry notice if something went wrong */}
       {error && (

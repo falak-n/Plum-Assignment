@@ -127,6 +127,9 @@ export default function Quiz(props) {
           </button>
         </div>
       </div>
+
+   
+
     </div>
   )
 }

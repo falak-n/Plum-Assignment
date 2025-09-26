@@ -1,6 +1,6 @@
 :root {
   --bg: #0b1020;
-  --card: #121832;
+  --card: #656e94;
   --text: #e6ebff;
   --muted: #b6c2ff;
   --accent: #7aa2ff;
@@ -13,20 +13,36 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
-  background: linear-gradient(180deg, #0b1020, #0a122a);
+  /*background: linear-gradient(180deg, #0b1020, #0a122a);*/
+  background: whitesmoke;
   color: var(--text);
 }
+
+
+
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.container {
-  max-width: 960px;
+/* .container {
+  max-width: 760px;
   margin: 0 auto;
   padding: 24px;
+} */
+ .container {
+  max-width: 860px;
+  padding: 24px;
+  margin: auto;                /* horizontal centering */
+  
+  /* Vertical centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 /* Card styles */
 .card {
@@ -36,6 +52,12 @@ a {
   padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
+ /* .card {
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+} */
+
 
 .title {
   font-weight: 700;
@@ -63,7 +85,7 @@ a {
 
 /* Buttons */
 .btn {
-  background: #1b57ff;
+  background: #101a34;
   border: none;
   color: #fff;
   padding: 10px 14px;
@@ -82,13 +104,16 @@ a {
   cursor: not-allowed;
 }
 
+
 /* Topic buttons */
 .topic {
   padding: 10px 12px;
   border: 1px solid #2a335a;
   border-radius: 12px;
-  background: #0f1630;
+  background: #2b314b;
   cursor: pointer;
+  font-weight: bold;
+
 }
 
 .topic.selected {
@@ -117,10 +142,11 @@ a {
   gap: 10px;
   padding: 12px;
   border: 1px solid #2a335a;
-  background: #0f1630;
+  background: #222b4a;
   border-radius: 12px;
   cursor: pointer;
   text-align: left;
+  font-weight: 500;
 }
 
 .option.correct {
@@ -131,12 +157,14 @@ a {
 .option.wrong {
   border-color: #ff4d4d;
   background: #2a0e12;
+  
 }
 
 .option.disabled {
-  opacity: 0.7;
+  opacity: 0.8;
   cursor: default;
 }
+
 
 /* Small labels and KBD style */
 .kbd {
