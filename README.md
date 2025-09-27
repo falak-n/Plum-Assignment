@@ -73,6 +73,9 @@ npm run preview
 # Lint code
 npm run lint
 ```
+![My Image](src/assets/s1.png)
+
+[![Video Thumbnail](src/assets/s1.png)](src/assets/video.mp4)
 
 ### Step 5: Verify Installation
 
@@ -352,3 +355,6 @@ src/
   - *Improvement:* Add i18n support for additional languages.
 
 ---
+![My Image](src/assets/s1.png)
+
+[![Video Thumbnail](src/assets/s1.png)](src/assets/video.mp4)
